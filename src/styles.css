@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  @apply
+  border border-zinc-400 rounded-md
+  min-h-[40px] min-w-[40px] w-full
+  p-1
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @apply
+  outline-none
+  p-2
+  rounded
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+p:hover {
+  @apply
+  bg-zinc-300
+}
+
+h1 {
+  @apply
+  text-6xl
+  font-bold
+}
+
+h2 {
+  @apply
+  text-5xl
+  font-bold
+}
+
+h3 {
+  @apply
+  text-4xl
+  font-bold
+}
+
+h4 {
+  @apply
+  text-3xl
+  font-bold
+}
+
+h5 {
+  @apply
+  text-2xl
+  font-bold
+}
+
+h6 {
+  @apply
+  text-xl
+  font-bold
+}

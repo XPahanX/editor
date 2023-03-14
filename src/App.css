@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.editor-container {
+  @apply
+  grid grid-rows-[auto,_1fr]
+  h-screen
+  /* bg-zinc-900 */
+}
+
+.editor-tools {
+  @apply
+  inline-flex flex-wrap
+  gap-1
+  p-3
+  m-auto
+  max-w-2xl
+}
+
+.editor {
+  @apply
+  h-full w-full
+  m-auto
+  px-3
+  max-w-3xl
+  overflow-auto
+  pb-[50vh] /* можно попробовать использовать ::after */
+}
+
+.editor-block {
+  @apply
+  grid grid-cols-[40px,_1fr] gap-2
+  overflow-hidden
+  py-2
+}
+
+.editor-block-container {
+}
+
+.editor-block:hover .editor-block-btn {
+  @apply
+  opacity-100
+  duration-200
+}
+
+.editor-block-btn {
+  @apply
+  opacity-0 
+}
+
+.editor-block-btn:focus {
+  @apply
+  opacity-100
+}
+
+.editor-block-menu {
+  @apply
+  absolute z-50
+  min-w-max
+  grid p-1 gap-1
+  border border-zinc-400 rounded-md
+  bg-white
+  shadow-md
+}
