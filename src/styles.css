@@ -9,7 +9,7 @@ button {
   p-1
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, code {
   @apply
   outline-none
   p-2
@@ -22,7 +22,8 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover,
-p:hover {
+p:hover,
+code:hover {
   @apply
   bg-zinc-300
 }
@@ -61,4 +62,9 @@ h6 {
   @apply
   text-xl
   font-bold
+}
+
+code {
+  @apply
+  bg-zinc-200
 }
