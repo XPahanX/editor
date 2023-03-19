@@ -2,18 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* есть недостаток */
+[contentEditable]:empty:not(:focus)::before {
+  content: attr(aria-placeholder);
+  @apply text-zinc-500
+}
+
+body {
+  @apply
+  dark:bg-zinc-900
+}
+
 button {
   @apply
-  border border-zinc-400 rounded-md
-  min-h-[40px] min-w-[40px] w-full
+  border border-zinc-400 dark:border-zinc-700
+  dark:text-zinc-50
+  rounded-md
+  min-h-[40px] min-w-[40px]
+  w-full /* для меню */
   p-1
 }
 
-h1, h2, h3, h4, h5, h6, p, code {
+svg {
+  @apply
+  m-auto
+}
+
+button:hover {
+  @apply
+  bg-zinc-200
+  dark:bg-zinc-800
+}
+
+button:active {
+  @apply
+  bg-zinc-300
+  dark:bg-zinc-700
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, code {
   @apply
   outline-none
   p-2
   rounded
+  dark:text-zinc-50
 }
 
 h1:hover,
@@ -23,9 +55,11 @@ h4:hover,
 h5:hover,
 h6:hover,
 p:hover,
+ul:hover,
 code:hover {
   @apply
   bg-zinc-300
+  dark:bg-zinc-700
 }
 
 h1 {
@@ -64,7 +98,22 @@ h6 {
   font-bold
 }
 
+li {
+  @apply
+  outline-none
+  p-1
+  list-disc
+  list-inside
+}
+
+li::marker {
+  @apply
+  text-zinc-600
+  dark:text-zinc-500
+}
+
 code {
   @apply
   bg-zinc-200
+  dark:bg-zinc-800
 }
